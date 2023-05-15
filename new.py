@@ -37,12 +37,12 @@ def processed_img(img_path):
     res = labels[y]
     print(res)
     return res.capitalize()
-def trans(langu):
-    lang = 'hi'
-    txt = langu
-    translator = Translator()
-    tr = translator.translate(txt, dest=lang)
-    return tr.text
+# def trans(langu):
+#     lang = 'hi'
+#     txt = langu
+#     translator = Translator()
+#     tr = translator.translate(txt, dest=lang)
+#     return tr.text
 
 def run():
     st.title("Fruits🍍-Vegetable🍅 Classification")
@@ -66,9 +66,9 @@ def run():
             cal = fetch_calories(result)
             if cal:
                 st.warning('**'+cal+'(100 grams)**')
-            lang = trans(result)
-            if lang:
-                st.success('**'+lang+'In Hindi Language')
+#             lang = trans(result)
+#             if lang:
+#                 st.success('**'+lang+'In Hindi Language')
 
-    st.write("Made by Sahil Nair and Yash Joshi")
+    st.write("Made by Yash Joshi")
 run()
